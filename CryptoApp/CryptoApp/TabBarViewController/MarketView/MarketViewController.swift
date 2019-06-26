@@ -24,7 +24,7 @@ class MarketViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+   
         controller.output = self
 
         view.backgroundColor = UIColor.white

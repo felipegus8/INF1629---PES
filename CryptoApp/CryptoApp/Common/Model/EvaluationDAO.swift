@@ -8,14 +8,14 @@
 
 import Foundation
 import Alamofire
-
+var coins_json:Any?
 public class EvaluationDAO {
     func get_coin_prices() {
         let headers: HTTPHeaders = [
             "Accepts": "application/json",
             "X-CMC_PRO_API_KEY": "ee535659-3b83-4132-83b0-aa4569b65ac1"
         ]
-        let parameters: Parameters = [ "start":"1","limit":"5000","convert":"USD"]
+        let parameters: Parameters = [ "start":"1","limit":"10","convert":"USD"]
         
         Alamofire.request("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest", parameters: parameters, headers: headers).responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
@@ -24,11 +24,9 @@ public class EvaluationDAO {
     
         if let json = response.result.value {
             print("JSON: \(json)") // serialized json response
-            }
-    
-        if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-            print("Data: \(utf8Text)") // original server data as UTF8 string
+            coins_json = json
         }
+        NotificationCenter.default.post(Notification(name: Notification.Name.init(rawValue:"didCompleteGetCoins")))
     }
 }
     func get_coin_predictions() {
@@ -40,10 +38,7 @@ public class EvaluationDAO {
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
             }
-            
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
-            }
+
         }
 
     }

@@ -5,8 +5,9 @@
 //  Created by Wellington Bezerra on 6/19/19.
 //  Copyright © 2019 Felipe Viberti. All rights reserved.
 //
+import Foundation
 
-final class Coin {
+final class Coin:NSObject {
     
     var name: String = ""
     var initials: String = ""
