@@ -8,12 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E22E83757E457141247C9B6 /* Pods_CryptoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA75C49861E7D305436E2F34 /* Pods_CryptoAppUITests.framework */; };
-		40BAE79B22B9C5D10024D2B3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE79922B9C5D10024D2B3 /* TabBarViewController.swift */; };
-		40BAE79C22B9C5D10024D2B3 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BAE79A22B9C5D10024D2B3 /* TabBarViewController.xib */; };
 		40BAE7A122B9C78F0024D2B3 /* PredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE79F22B9C78F0024D2B3 /* PredictionViewController.swift */; };
 		40BAE7A222B9C78F0024D2B3 /* PredictionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BAE7A022B9C78F0024D2B3 /* PredictionViewController.xib */; };
-		40BAE7A622B9C7C90024D2B3 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE7A422B9C7C90024D2B3 /* WalletViewController.swift */; };
-		40BAE7A722B9C7C90024D2B3 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BAE7A522B9C7C90024D2B3 /* WalletViewController.xib */; };
 		40BAE7AA22B9C82E0024D2B3 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE7A822B9C82E0024D2B3 /* MarketViewController.swift */; };
 		40BAE7AB22B9C82E0024D2B3 /* MarketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BAE7A922B9C82E0024D2B3 /* MarketViewController.xib */; };
 		40BAE7B022B9DC310024D2B3 /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE7AE22B9DC310024D2B3 /* MarketTableViewCell.swift */; };
@@ -52,12 +48,8 @@
 
 /* Begin PBXFileReference section */
 		3E64DFA2B7C87C4A33D44932 /* Pods_CryptoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		40BAE79922B9C5D10024D2B3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		40BAE79A22B9C5D10024D2B3 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		40BAE79F22B9C78F0024D2B3 /* PredictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionViewController.swift; sourceTree = "<group>"; };
 		40BAE7A022B9C78F0024D2B3 /* PredictionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictionViewController.xib; sourceTree = "<group>"; };
-		40BAE7A422B9C7C90024D2B3 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
-		40BAE7A522B9C7C90024D2B3 /* WalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletViewController.xib; sourceTree = "<group>"; };
 		40BAE7A822B9C82E0024D2B3 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		40BAE7A922B9C82E0024D2B3 /* MarketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketViewController.xib; sourceTree = "<group>"; };
 		40BAE7AE22B9DC310024D2B3 /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,10 +125,7 @@
 		40BAE79D22B9C5DE0024D2B3 /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
-				40BAE79922B9C5D10024D2B3 /* TabBarViewController.swift */,
-				40BAE79A22B9C5D10024D2B3 /* TabBarViewController.xib */,
 				40BAE79E22B9C7450024D2B3 /* PredictionView */,
-				40BAE7A322B9C7970024D2B3 /* WalletView */,
 				40BAE7AC22B9C8350024D2B3 /* MarketView */,
 			);
 			path = TabBarViewController;
@@ -149,15 +138,6 @@
 				40BAE7A022B9C78F0024D2B3 /* PredictionViewController.xib */,
 			);
 			path = PredictionView;
-			sourceTree = "<group>";
-		};
-		40BAE7A322B9C7970024D2B3 /* WalletView */ = {
-			isa = PBXGroup;
-			children = (
-				40BAE7A422B9C7C90024D2B3 /* WalletViewController.swift */,
-				40BAE7A522B9C7C90024D2B3 /* WalletViewController.xib */,
-			);
-			path = WalletView;
 			sourceTree = "<group>";
 		};
 		40BAE7AC22B9C8350024D2B3 /* MarketView */ = {
@@ -371,12 +351,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40BAE79C22B9C5D10024D2B3 /* TabBarViewController.xib in Resources */,
 				40BAE7A222B9C78F0024D2B3 /* PredictionViewController.xib in Resources */,
 				9C50028822A930F7008AE561 /* LaunchScreen.storyboard in Resources */,
 				9C50028522A930F7008AE561 /* Assets.xcassets in Resources */,
 				9C50028322A930F5008AE561 /* Main.storyboard in Resources */,
-				40BAE7A722B9C7C90024D2B3 /* WalletViewController.xib in Resources */,
 				40BAE7AB22B9C82E0024D2B3 /* MarketViewController.xib in Resources */,
 				40BAE7B122B9DC310024D2B3 /* MarketTableViewCell.xib in Resources */,
 			);
@@ -493,12 +471,10 @@
 				40BAE7B022B9DC310024D2B3 /* MarketTableViewCell.swift in Sources */,
 				9CEEC75C22C3E88600A9CF93 /* EvaluationDAO.swift in Sources */,
 				40BAE7A122B9C78F0024D2B3 /* PredictionViewController.swift in Sources */,
-				40BAE79B22B9C5D10024D2B3 /* TabBarViewController.swift in Sources */,
 				9C50027E22A930F5008AE561 /* AppDelegate.swift in Sources */,
 				40BAE7AA22B9C82E0024D2B3 /* MarketViewController.swift in Sources */,
 				9CEEC75E22C3FE0E00A9CF93 /* PredictionDAO.swift in Sources */,
 				40BAE7B522BAB9C40024D2B3 /* Coin.swift in Sources */,
-				40BAE7A622B9C7C90024D2B3 /* WalletViewController.swift in Sources */,
 				40BAE7B922BABD760024D2B3 /* MarketController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

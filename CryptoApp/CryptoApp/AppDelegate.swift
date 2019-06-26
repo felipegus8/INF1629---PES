@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let tabBarViewController = TabBarViewController()
+        let tabBarViewController = MarketViewController()
         
         let navController = UINavigationController(rootViewController: tabBarViewController)
         

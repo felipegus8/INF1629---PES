@@ -24,6 +24,9 @@ class MarketViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        EvaluationDAO().get_coin_prices()
+        //        EvaluationDAO().get_coin_predictions()
    
         controller.output = self
 
