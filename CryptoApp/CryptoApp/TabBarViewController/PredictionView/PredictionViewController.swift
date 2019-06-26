@@ -35,13 +35,7 @@ class PredictionViewController: UIViewController, ChartDelegate {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(self.getValuesForChart), name: NSNotification.Name(rawValue: "didCompleteGetPredictions"), object: nil)
         chart.delegate = self
-        var valuesArray = getPreviousValuesForChart()
-        print(valuesArray)
-        let series = ChartSeries(valuesArray)
-        series.color = ChartColors.yellowColor()
-        series.area = true
-        chart.add(series)
-        
+      
         
         currentPrice()
     }
@@ -95,11 +89,13 @@ class PredictionViewController: UIViewController, ChartDelegate {
         return valuesArray
     }
     
-        private func currentPrice() {
+    private func currentPrice() {
         
         chart.removeAllSeries()
+        var valuesArray = getPreviousValuesForChart()
+        print(valuesArray)
         
-        let series = ChartSeries([0, 6, 2, 8, 4, 7, 3, 10, 8])
+        let series = ChartSeries(valuesArray)
         series.color = ChartColors.yellowColor()
         series.area = true
         chart.add(series)
