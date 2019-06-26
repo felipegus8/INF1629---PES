@@ -29,6 +29,7 @@
 		9C50029322A930F7008AE561 /* CryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50029222A930F7008AE561 /* CryptoAppTests.swift */; };
 		9C50029E22A930F7008AE561 /* CryptoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50029D22A930F7008AE561 /* CryptoAppUITests.swift */; };
 		9CEEC75C22C3E88600A9CF93 /* EvaluationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEC75B22C3E88600A9CF93 /* EvaluationDAO.swift */; };
+		9CEEC75E22C3FE0E00A9CF93 /* PredictionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEC75D22C3FE0E00A9CF93 /* PredictionDAO.swift */; };
 		CFE5CAFDD004B0DAD80BBBED /* Pods_CryptoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E64DFA2B7C87C4A33D44932 /* Pods_CryptoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		9C50029D22A930F7008AE561 /* CryptoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppUITests.swift; sourceTree = "<group>"; };
 		9C50029F22A930F7008AE561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CEEC75B22C3E88600A9CF93 /* EvaluationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationDAO.swift; sourceTree = "<group>"; };
+		9CEEC75D22C3FE0E00A9CF93 /* PredictionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionDAO.swift; sourceTree = "<group>"; };
 		C391D11B7C898A21F9021984 /* Pods-CryptoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoAppTests.release.xcconfig"; path = "Target Support Files/Pods-CryptoAppTests/Pods-CryptoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA75C49861E7D305436E2F34 /* Pods_CryptoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59CB7712128EBB7106194A4 /* Pods-CryptoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-CryptoAppUITests/Pods-CryptoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				40BAE7B422BAB9C40024D2B3 /* Coin.swift */,
 				9CEEC75B22C3E88600A9CF93 /* EvaluationDAO.swift */,
+				9CEEC75D22C3FE0E00A9CF93 /* PredictionDAO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				40BAE79B22B9C5D10024D2B3 /* TabBarViewController.swift in Sources */,
 				9C50027E22A930F5008AE561 /* AppDelegate.swift in Sources */,
 				40BAE7AA22B9C82E0024D2B3 /* MarketViewController.swift in Sources */,
+				9CEEC75E22C3FE0E00A9CF93 /* PredictionDAO.swift in Sources */,
 				40BAE7B522BAB9C40024D2B3 /* Coin.swift in Sources */,
 				40BAE7A622B9C7C90024D2B3 /* WalletViewController.swift in Sources */,
 				40BAE7B922BABD760024D2B3 /* MarketController.swift in Sources */,
