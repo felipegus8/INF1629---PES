@@ -21,6 +21,8 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        EvaluationDAO().get_coin_prices()
+
 
         let walletViewController = WalletViewController()
         

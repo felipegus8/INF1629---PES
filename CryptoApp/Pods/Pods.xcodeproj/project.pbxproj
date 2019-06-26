@@ -78,11 +78,11 @@
 
 /* Begin PBXFileReference section */
 		01A72345DB4F082D892F0958D7657F50 /* Pods-CryptoApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CryptoApp-umbrella.h"; sourceTree = "<group>"; };
-		0386647CB37914AEC8D0A23E3BF2B668 /* SwiftChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftChart.framework; path = SwiftChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0386647CB37914AEC8D0A23E3BF2B668 /* SwiftChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0527934CA7FA5F21EDBEF445518E3DA5 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		0600201F45A0550D0848584BF7720ECF /* Pods-CryptoAppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptoAppTests-Info.plist"; sourceTree = "<group>"; };
 		0BF1B262382F645CDFE749D5F7ECC984 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		0C65B35C0270CACB1329BD3A681EE6A9 /* Pods_CryptoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CryptoAppUITests.framework; path = "Pods-CryptoAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C65B35C0270CACB1329BD3A681EE6A9 /* Pods_CryptoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		147039E947E74E8D84EB714B9DF77FDF /* Pods-CryptoAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptoAppUITests-dummy.m"; sourceTree = "<group>"; };
 		169FBF6F43A72292D213527CF9DC086F /* Pods-CryptoApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptoApp-dummy.m"; sourceTree = "<group>"; };
 		184B872ECCD9CE8C7983D7C7B1967621 /* Pods-CryptoAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptoAppTests-dummy.m"; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		3A20E4F6E06FF0D7CD8E3B1F35CADFBC /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		3C8DBFD6C33893660DF128D6B714E5C6 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		43B360DD6FA0663509E2304F564B5858 /* Pods_CryptoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CryptoApp.framework; path = "Pods-CryptoApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B360DD6FA0663509E2304F564B5858 /* Pods_CryptoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		443FA1848896E1E24451A5EECC014BC7 /* SwiftChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftChart-dummy.m"; sourceTree = "<group>"; };
 		4A968936285A3BD8ED8A68548804B088 /* Pods-CryptoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4D0B0B955EE231527ABA69FCCE66C4F7 /* Pods-CryptoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,10 +105,10 @@
 		502F6983B8EB7D8B1189AA2975FABAC0 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		57D57243CFAA790CE5593532ECEAEB6F /* Pods-CryptoApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CryptoApp.modulemap"; sourceTree = "<group>"; };
 		5A6CC6B80C055FCFA17F05FD67AF2753 /* Pods-CryptoApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptoApp-frameworks.sh"; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA3B895DB7E5763B1C072C1BD709CE6 /* Pods-CryptoApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptoApp-Info.plist"; sourceTree = "<group>"; };
 		742E04A8046008E3662E908D88861197 /* Pods-CryptoApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptoApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		7D8D56786A5BB97084211E7A7D4971E2 /* Pods_CryptoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CryptoAppTests.framework; path = "Pods-CryptoAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D8D56786A5BB97084211E7A7D4971E2 /* Pods_CryptoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDB38BFB7591257295AA3088F086015 /* Pods-CryptoAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CryptoAppTests-umbrella.h"; sourceTree = "<group>"; };
 		7FF693D7FDA582457894B03005CE8711 /* SwiftChart-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftChart-prefix.pch"; sourceTree = "<group>"; };
 		827776205A7B72A9739F26460E5E02B4 /* Pods-CryptoAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptoAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		8EAF86A1738579310945257DD0E05259 /* SwiftChart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftChart.modulemap; sourceTree = "<group>"; };
 		924218CF243D9AC528CDBB4E3158E4B3 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		9BEFDD559A72AB5E7D3F18814F0B4CC4 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0BB6AF3655A7DE18610681C8844251D /* Pods-CryptoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A2A45801FF2E08A5DC19297D378279F7 /* SwiftChart-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftChart-Info.plist"; sourceTree = "<group>"; };
 		A38376D27B3C67558071E428CE04FE62 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
@@ -301,7 +301,6 @@
 				FBB38944ADC7649258BF7473C86BE59E /* Validation.swift */,
 				0B859B587CE4C84779614EEC39984D1C /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -339,7 +338,6 @@
 				B57B44E7037E435B1AAE7433F8B2FA13 /* ChartSeries.swift */,
 				B10C4E95A77BB34259195FEB92ABBBC0 /* Support Files */,
 			);
-			name = SwiftChart;
 			path = SwiftChart;
 			sourceTree = "<group>";
 		};
@@ -742,7 +740,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1063,7 +1061,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
