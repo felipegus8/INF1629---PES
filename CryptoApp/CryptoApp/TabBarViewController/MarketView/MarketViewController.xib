@@ -34,7 +34,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GP9-cp-8sb">
-                    <rect key="frame" x="0.0" y="208" width="414" height="654"/>
+                    <rect key="frame" x="0.0" y="208" width="414" height="688"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="tzU-7a-cvf"/>
@@ -52,8 +52,8 @@
                 <constraint firstItem="Mbc-tP-K9p" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="dEi-e9-0dg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mbc-tP-K9p" secondAttribute="trailing" constant="20" id="iUK-eb-MCG"/>
                 <constraint firstItem="QG2-7d-pdi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nXk-LS-dDY"/>
+                <constraint firstAttribute="bottom" secondItem="GP9-cp-8sb" secondAttribute="bottom" id="qJw-dq-nPx"/>
                 <constraint firstItem="GP9-cp-8sb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="su4-Nn-B8t"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GP9-cp-8sb" secondAttribute="bottom" id="unz-Ym-fVh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>

@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PredictionViewController" customModule="CryptoApp" customModuleProvider="target">
             <connections>
                 <outlet property="chart" destination="8GH-tI-RUh" id="Dg8-5Z-D9C"/>
+                <outlet property="segmentControl" destination="5dg-Fw-tno" id="qsS-qI-o3f"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,19 +23,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8GH-tI-RUh" customClass="Chart" customModule="SwiftChart">
-                    <rect key="frame" x="20" y="94" width="374" height="374"/>
+                    <rect key="frame" x="20" y="104" width="374" height="374"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="374" id="5UN-Bl-0ac"/>
                         <constraint firstAttribute="width" constant="374" id="mmD-JJ-yKf"/>
                     </constraints>
                 </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5dg-Fw-tno">
+                    <rect key="frame" x="20" y="56" width="374" height="29"/>
+                    <segments>
+                        <segment title="Cotação atual"/>
+                        <segment title="Cotação Futura"/>
+                    </segments>
+                    <connections>
+                        <action selector="didSelectSegmentIndex:" destination="-1" eventType="valueChanged" id="yCc-aD-awS"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8GH-tI-RUh" secondAttribute="trailing" constant="20" id="0kN-o0-eDf"/>
-                <constraint firstItem="8GH-tI-RUh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="SFw-nb-dvd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5dg-Fw-tno" secondAttribute="trailing" constant="20" id="9Jk-lN-nna"/>
+                <constraint firstItem="5dg-Fw-tno" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="P1k-Xf-pTI"/>
                 <constraint firstItem="8GH-tI-RUh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="h5N-57-pAy"/>
+                <constraint firstItem="8GH-tI-RUh" firstAttribute="top" secondItem="5dg-Fw-tno" secondAttribute="bottom" constant="20" id="ied-3f-7Ui"/>
+                <constraint firstItem="5dg-Fw-tno" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wfl-He-sKs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
