@@ -16,6 +16,8 @@ class MarketViewController: UIViewController {
     
     private var controller = MarketController()
     private var coinsCopy: [Coin] = []
+    private var filteredCoins: [Coin] = []
+    private var hasSearchBarActivated: Bool = false
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -24,6 +26,8 @@ class MarketViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
         
         controller.output = self
         
@@ -35,6 +39,7 @@ class MarketViewController: UIViewController {
         configureView()
         
         configureTableView()
+        
     }
 
 }
@@ -44,7 +49,7 @@ extension MarketViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return coinsCopy.count
+        return hasSearchBarActivated ? filteredCoins.count : coinsCopy.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -56,16 +61,49 @@ extension MarketViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MarketTableViewCell", for: indexPath) as? MarketTableViewCell else { return UITableViewCell() }
         
-        cell.setup(coin: coinsCopy[indexPath.row])
+        let coin = hasSearchBarActivated ? filteredCoins[indexPath.row] : coinsCopy[indexPath.row]
+        
+        cell.setup(coin: coin)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let registerVC = PredictionViewController(coinName: coinsCopy[indexPath.row].name,coinInitials: coinsCopy[indexPath.row].initials)
+        let coinName = hasSearchBarActivated ? filteredCoins[indexPath.row].name : coinsCopy[indexPath.row].name
+        
+        let coinInitials = hasSearchBarActivated ? filteredCoins[indexPath.row].initials : coinsCopy[indexPath.row].initials
+        
+        let registerVC = PredictionViewController(coinName: coinName, coinInitials: coinInitials)
         
         self.navigationController?.pushViewController(registerVC, animated: true)
+    }
+    
+}
+
+
+extension MarketViewController: UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredCoins.removeAll()
+        
+        guard let text = searchBar.text, text.count > 0 else {
+            
+            hasSearchBarActivated = false
+            
+            tableView.reloadData()
+            
+            return
+        }
+        
+        hasSearchBarActivated = true
+        
+        filteredCoins = coinsCopy.filter({( coin : Coin) -> Bool in
+            return coin.name.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
     }
     
 }
