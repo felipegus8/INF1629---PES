@@ -72,7 +72,7 @@ extension MarketViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let registerVC = PredictionViewController(coinName: coinsCopy[indexPath.row].name)
+        let registerVC = PredictionViewController(coinName: coinsCopy[indexPath.row].name,coinInitials: coinsCopy[indexPath.row].initials)
         
         self.navigationController?.pushViewController(registerVC, animated: true)
     }

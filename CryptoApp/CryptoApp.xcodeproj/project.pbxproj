@@ -30,6 +30,7 @@
 		9C50029E22A930F7008AE561 /* CryptoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50029D22A930F7008AE561 /* CryptoAppUITests.swift */; };
 		9CEEC75C22C3E88600A9CF93 /* EvaluationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEC75B22C3E88600A9CF93 /* EvaluationDAO.swift */; };
 		9CEEC75E22C3FE0E00A9CF93 /* PredictionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEC75D22C3FE0E00A9CF93 /* PredictionDAO.swift */; };
+		9CEEC76422C4127300A9CF93 /* crypto-markets2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9CEEC76322C4127300A9CF93 /* crypto-markets2.csv */; };
 		CFE5CAFDD004B0DAD80BBBED /* Pods_CryptoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E64DFA2B7C87C4A33D44932 /* Pods_CryptoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		9C50029F22A930F7008AE561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CEEC75B22C3E88600A9CF93 /* EvaluationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationDAO.swift; sourceTree = "<group>"; };
 		9CEEC75D22C3FE0E00A9CF93 /* PredictionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionDAO.swift; sourceTree = "<group>"; };
+		9CEEC76322C4127300A9CF93 /* crypto-markets2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "crypto-markets2.csv"; path = "../../crypto-markets2.csv"; sourceTree = "<group>"; };
 		C391D11B7C898A21F9021984 /* Pods-CryptoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoAppTests.release.xcconfig"; path = "Target Support Files/Pods-CryptoAppTests/Pods-CryptoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA75C49861E7D305436E2F34 /* Pods_CryptoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59CB7712128EBB7106194A4 /* Pods-CryptoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-CryptoAppUITests/Pods-CryptoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		9C50027C22A930F5008AE561 /* CryptoApp */ = {
 			isa = PBXGroup;
 			children = (
+				9CEEC76322C4127300A9CF93 /* crypto-markets2.csv */,
 				40BAE7B222BAB9790024D2B3 /* Common */,
 				40BAE79D22B9C5DE0024D2B3 /* TabBarViewController */,
 				9C50027D22A930F5008AE561 /* AppDelegate.swift */,
@@ -376,6 +379,7 @@
 				9C50028822A930F7008AE561 /* LaunchScreen.storyboard in Resources */,
 				9C50028522A930F7008AE561 /* Assets.xcassets in Resources */,
 				9C50028322A930F5008AE561 /* Main.storyboard in Resources */,
+				9CEEC76422C4127300A9CF93 /* crypto-markets2.csv in Resources */,
 				40BAE7A722B9C7C90024D2B3 /* WalletViewController.xib in Resources */,
 				40BAE7AB22B9C82E0024D2B3 /* MarketViewController.xib in Resources */,
 				40BAE7B122B9DC310024D2B3 /* MarketTableViewCell.xib in Resources */,

@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+var prediction_json:Any?
 
 public class PredictionDAO {
     
@@ -19,7 +20,9 @@ public class PredictionDAO {
             
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
+                prediction_json = json
             }
+             NotificationCenter.default.post(Notification(name: Notification.Name.init(rawValue:"didCompleteGetPredictions")))
             
         }
         

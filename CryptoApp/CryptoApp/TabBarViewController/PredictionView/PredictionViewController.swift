@@ -8,13 +8,14 @@
 
 import UIKit
 import SwiftChart
-
+import CSV
 class PredictionViewController: UIViewController, ChartDelegate {
 
     @IBOutlet weak var chart: Chart!
+    var coinInitials:String!
     
-    init(coinName: String) {
-        
+    init(coinName: String,coinInitials:String) {
+        self.coinInitials = coinInitials
         super.init(nibName: "PredictionViewController", bundle: nil)
         
         title = coinName
@@ -31,10 +32,11 @@ class PredictionViewController: UIViewController, ChartDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.getValuesForChart), name: NSNotification.Name(rawValue: "didCompleteGetPredictions"), object: nil)
         chart.delegate = self
-        
-        let series = ChartSeries([0, 6, 2, 8, 4, 7, 3, 10, 8])
+        var valuesArray = getPreviousValuesForChart()
+        print(valuesArray)
+        let series = ChartSeries(valuesArray)
         series.color = ChartColors.yellowColor()
         series.area = true
         chart.add(series)
@@ -59,5 +61,27 @@ class PredictionViewController: UIViewController, ChartDelegate {
         
     }
 
+    func getPreviousValuesForChart() -> [Double] {
+        var valuesArray:[Double] = []
+        let bundle = Bundle.main
+        let path = bundle.path(forResource: "crypto-markets2", ofType: "csv")
+        print(path)
 
+        let stream = InputStream(fileAtPath: path!)!
+        let csv = try! CSVReader(stream: stream,hasHeaderRow: true)
+        while let row = csv.next() {
+            if(row[1] == self.coinInitials) {
+                valuesArray.append(Double(row[8])!)
+            }
+        }
+        return valuesArray
+    }
+    
+    @objc func getValuesForChart() {
+        for(key,value) in prediction_json as! [String:Any] {
+            print(key)
+            print(value)
+    }
+
+}
 }
