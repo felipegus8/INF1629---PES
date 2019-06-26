@@ -22,14 +22,34 @@ class MarketTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        configureCell()
+    }
+    
+    private func configureCell() {
+        
         backgroundViewCell.layer.cornerRadius = 5.0
         
-        self.selectionStyle = .none
+        selectionStyle = .none
+        
+        backgroundColor = UIColor.defaultColor
+        
+        backgroundViewCell.backgroundColor = UIColor.cellColor
+        
+        setupImageView()
+    }
+    
+    private func setupImageView() {
+        
+        self.coinImageView.layer.borderWidth = 1.0
+        self.coinImageView.layer.masksToBounds = false
+        self.coinImageView.layer.cornerRadius = self.coinImageView.frame.size.width / 2
+        self.coinImageView.layer.borderColor = UIColor.white.cgColor
+        self.coinImageView.clipsToBounds = true
     }
     
     func setup(coin: Coin) {
         
-        coinImageView.image = UIImage(named: coin.imageView)
+        coinImageView.image = UIImage(named: "coin")
         
         coinInitials.text = coin.initials
         
@@ -38,6 +58,7 @@ class MarketTableViewCell: UITableViewCell {
         coinValue.text = coin.value
         
         coinPercentage.text = coin.percentage
+        
     }
 
 }

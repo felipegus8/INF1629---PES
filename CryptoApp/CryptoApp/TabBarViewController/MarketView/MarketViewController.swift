@@ -25,28 +25,16 @@ class MarketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        controller.output = self
+        
         EvaluationDAO().get_coin_prices()
         //        EvaluationDAO().get_coin_predictions()
-   
-        controller.output = self
-
-        view.backgroundColor = UIColor.white
-        
-        configureTableView()
-        
-        registerCell()
         
         controller.fetchCoins()
-    }
-    
-    private func configureTableView() {
         
-        self.tableView.backgroundColor = UIColor.white
-    }
-    
-    func registerCell() {
+        configureView()
         
-        self.tableView.register(UINib(nibName: "MarketTableViewCell", bundle: nil), forCellReuseIdentifier: "MarketTableViewCell")
+        configureTableView()
     }
 
 }
@@ -61,7 +49,7 @@ extension MarketViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 100
+        return 110
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,6 +81,29 @@ extension MarketViewController: MarketControllerOutput {
     
     func error() {
         
+    }
+    
+}
+
+extension MarketViewController {
+    
+    private func configureView() {
+        
+        view.backgroundColor = UIColor.defaultColor
+        
+        titleLabel.textColor = UIColor.white
+    }
+    
+    private func configureTableView() {
+        
+        registerCell()
+        
+        self.tableView.backgroundColor = UIColor.defaultColor
+    }
+    
+    private func registerCell() {
+        
+        self.tableView.register(UINib(nibName: "MarketTableViewCell", bundle: nil), forCellReuseIdentifier: "MarketTableViewCell")
     }
     
 }

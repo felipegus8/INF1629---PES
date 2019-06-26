@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E22E83757E457141247C9B6 /* Pods_CryptoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA75C49861E7D305436E2F34 /* Pods_CryptoAppUITests.framework */; };
+		405EA44D22C40B9C0009DFC7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405EA44C22C40B9C0009DFC7 /* UIColor.swift */; };
 		40BAE7A122B9C78F0024D2B3 /* PredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE79F22B9C78F0024D2B3 /* PredictionViewController.swift */; };
 		40BAE7A222B9C78F0024D2B3 /* PredictionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BAE7A022B9C78F0024D2B3 /* PredictionViewController.xib */; };
 		40BAE7AA22B9C82E0024D2B3 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE7A822B9C82E0024D2B3 /* MarketViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		3E64DFA2B7C87C4A33D44932 /* Pods_CryptoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		405EA44C22C40B9C0009DFC7 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		40BAE79F22B9C78F0024D2B3 /* PredictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionViewController.swift; sourceTree = "<group>"; };
 		40BAE7A022B9C78F0024D2B3 /* PredictionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictionViewController.xib; sourceTree = "<group>"; };
 		40BAE7A822B9C82E0024D2B3 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
@@ -155,8 +157,8 @@
 		40BAE7B222BAB9790024D2B3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				40BAE7BA22BAD9BB0024D2B3 /* New Group */,
 				40BAE7B322BAB9AC0024D2B3 /* Model */,
+				405EA44C22C40B9C0009DFC7 /* UIColor.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -169,13 +171,6 @@
 				9CEEC75D22C3FE0E00A9CF93 /* PredictionDAO.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		40BAE7BA22BAD9BB0024D2B3 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9C50027122A930F5008AE561 = {
@@ -476,6 +471,7 @@
 				9CEEC75E22C3FE0E00A9CF93 /* PredictionDAO.swift in Sources */,
 				40BAE7B522BAB9C40024D2B3 /* Coin.swift in Sources */,
 				40BAE7B922BABD760024D2B3 /* MarketController.swift in Sources */,
+				405EA44D22C40B9C0009DFC7 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
