@@ -28,16 +28,26 @@ class PredictionViewController: UIViewController, ChartDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         
-        self.navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.barTintColor = UIColor.defaultColor
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.getValuesForChart), name: NSNotification.Name(rawValue: "didCompleteGetPredictions"), object: nil)
-        chart.delegate = self
-      
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.getValuesForChart), name: NSNotification.Name(rawValue: "didCompleteGetPredictions"), object: nil)
+        
+        chart.delegate = self
+        chart.gridColor = UIColor.clear
+        chart.showXLabelsAndGrid = false
+        chart.labelColor = UIColor.white
+      
         currentPrice()
+        
+        segmentControl.tintColor = UIColor.white
+        
+        view.backgroundColor = UIColor.defaultColor
     }
     
     func didTouchChart(_ chart: Chart, indexes: [Int?], x: Double, left: CGFloat) {
@@ -92,12 +102,15 @@ class PredictionViewController: UIViewController, ChartDelegate {
     private func currentPrice() {
         
         chart.removeAllSeries()
+        
         var valuesArray = getPreviousValuesForChart()
+        
         print(valuesArray)
         
         let series = ChartSeries(valuesArray)
-        series.color = ChartColors.yellowColor()
+        series.color = UIColor.cellColor
         series.area = true
+  
         chart.add(series)
     }
     
@@ -106,8 +119,9 @@ class PredictionViewController: UIViewController, ChartDelegate {
         chart.removeAllSeries()
         
         let series = ChartSeries([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 27, 28, 29])
-        series.color = ChartColors.yellowColor()
+        series.color = UIColor.cellColor
         series.area = true
+        
         chart.add(series)
     }
 
