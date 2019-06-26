@@ -27,13 +27,23 @@ class PredictionViewController: UIViewController, ChartDelegate {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        
+        if (coinInitials == "BTC") {
+            PredictionDAO().get_btc_predictions()
+        }
+        if (coinInitials == "XRP") {
+            PredictionDAO().get_xrp_predictions()
+        }
+        if(coinInitials != "BTC" && coinInitials != "XRP") {
+            segmentControl.isHidden = true
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(self.getPredictedValuesForChart), name: NSNotification.Name(rawValue: "didCompleteGetPredictions"), object: nil)
         self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.getValuesForChart), name: NSNotification.Name(rawValue: "didCompleteGetPredictions"), object: nil)
+        
+
         chart.delegate = self
       
         
@@ -104,19 +114,23 @@ class PredictionViewController: UIViewController, ChartDelegate {
     private func futurePrice() {
         
         chart.removeAllSeries()
+        var future_values = getPredictedValuesForChart()
         
-        let series = ChartSeries([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 27, 28, 29])
+        let series = ChartSeries(future_values)
         series.color = ChartColors.yellowColor()
         series.area = true
         chart.add(series)
     }
 
     
-    @objc func getValuesForChart() {
-        for(key,value) in prediction_json as! [String:Any] {
-            print(key)
-            print(value)
+    @objc func getPredictedValuesForChart() -> [Double] {
+        var future_values:[Double] = []
+        let newArray = prediction_json as! NSArray
+        for value in newArray {
+            let newValue = value as! [String:Any]
+            future_values.append(newValue["predicted_value"] as! Double)
     }
+        return future_values
 
 }
 }

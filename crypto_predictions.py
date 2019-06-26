@@ -78,6 +78,6 @@ def plot_forecast(y,pred_uc,pred_ci):
     plt.legend()
     plt.show()
 
-# get_predictions('BTC')
-# get_predictions('XRP')
-# get_predictions('XMR')
+get_predictions('BTC')
+get_predictions('XRP')
+get_predictions('LTC')

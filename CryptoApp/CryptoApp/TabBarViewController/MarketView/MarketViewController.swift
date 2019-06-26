@@ -28,7 +28,6 @@ class MarketViewController: UIViewController {
         controller.output = self
         
         EvaluationDAO().get_coin_prices()
-        //        EvaluationDAO().get_coin_predictions()
         
         controller.fetchCoins()
         
