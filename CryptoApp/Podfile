@@ -7,7 +7,7 @@ target 'CryptoApp' do
 
   # Pods for CryptoApp
   pod "SwiftChart"
-
+  pod "Alamofire"
   target 'CryptoAppTests' do
     inherit! :search_paths
     # Pods for testing
