@@ -45,9 +45,15 @@ class PredictionViewController: UIViewController, ChartDelegate {
         
 
         chart.delegate = self
+        chart.gridColor = UIColor.clear
+        chart.showXLabelsAndGrid = false
+        chart.labelColor = UIColor.white
       
-        
         currentPrice()
+        
+        segmentControl.tintColor = UIColor.white
+        
+        view.backgroundColor = UIColor.defaultColor
     }
     
     func didTouchChart(_ chart: Chart, indexes: [Int?], x: Double, left: CGFloat) {
@@ -102,12 +108,15 @@ class PredictionViewController: UIViewController, ChartDelegate {
     private func currentPrice() {
         
         chart.removeAllSeries()
+        
         var valuesArray = getPreviousValuesForChart()
+        
         print(valuesArray)
         
         let series = ChartSeries(valuesArray)
-        series.color = ChartColors.yellowColor()
+        series.color = UIColor.cellColor
         series.area = true
+  
         chart.add(series)
     }
     
@@ -119,6 +128,7 @@ class PredictionViewController: UIViewController, ChartDelegate {
         let series = ChartSeries(future_values)
         series.color = ChartColors.yellowColor()
         series.area = true
+        
         chart.add(series)
     }
 
