@@ -55,9 +55,9 @@ class MarketTableViewCell: UITableViewCell {
         
         coinName.text = coin.name
         
-        coinValue.text = coin.value
+        coinValue.text = "$" + String(Double(round(Double(1000)*Double(coin.value)!)/1000))
         
-        coinPercentage.text = coin.percentage
+        coinPercentage.text = coin.percentage + "%"
         
     }
 
