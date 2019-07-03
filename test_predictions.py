@@ -32,6 +32,22 @@ class Test_Predictions(unittest.TestCase):
         self.assertTrue('lower close' in response_json[0])
         self.assertTrue('upper close' in response_json[0])
 
+    def test_resample_df(self):    
+        y = resample_df(self.df)
+        self.assertTrue('close' in y)
 
+    def test_predicted_to_json(self):
+        response_json = predicted_to_json(self.df, self.coin)
+        self.assertTrue('predicted_value' in response_json[0])
+        self.assertTrue('lower close' in response_json[0])
+        self.assertTrue('upper close' in response_json[0])
+
+    def test_plot_current_df(self):
+        plot_df = self.df
+        self.assertTrue('lower close' in plot_df)
+        self.assertTrue('upper close' in plot_df)
+
+
+    
 if __name__ == '__main__':
     unittest.main()
