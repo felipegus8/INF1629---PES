@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E22E83757E457141247C9B6 /* Pods_CryptoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA75C49861E7D305436E2F34 /* Pods_CryptoAppUITests.framework */; };
 		405EA44D22C40B9C0009DFC7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405EA44C22C40B9C0009DFC7 /* UIColor.swift */; };
+		4063776322CD937A0093E069 /* CryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50029222A930F7008AE561 /* CryptoAppTests.swift */; };
 		40BAE7A122B9C78F0024D2B3 /* PredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE79F22B9C78F0024D2B3 /* PredictionViewController.swift */; };
 		40BAE7A222B9C78F0024D2B3 /* PredictionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BAE7A022B9C78F0024D2B3 /* PredictionViewController.xib */; };
 		40BAE7AA22B9C82E0024D2B3 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE7A822B9C82E0024D2B3 /* MarketViewController.swift */; };
@@ -23,8 +23,6 @@
 		9C50028322A930F5008AE561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C50028122A930F5008AE561 /* Main.storyboard */; };
 		9C50028522A930F7008AE561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C50028422A930F7008AE561 /* Assets.xcassets */; };
 		9C50028822A930F7008AE561 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C50028622A930F7008AE561 /* LaunchScreen.storyboard */; };
-		9C50029322A930F7008AE561 /* CryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50029222A930F7008AE561 /* CryptoAppTests.swift */; };
-		9C50029E22A930F7008AE561 /* CryptoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50029D22A930F7008AE561 /* CryptoAppUITests.swift */; };
 		9CEEC75C22C3E88600A9CF93 /* EvaluationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEC75B22C3E88600A9CF93 /* EvaluationDAO.swift */; };
 		9CEEC75E22C3FE0E00A9CF93 /* PredictionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEC75D22C3FE0E00A9CF93 /* PredictionDAO.swift */; };
 		9CEEC76422C4127300A9CF93 /* crypto-markets2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9CEEC76322C4127300A9CF93 /* crypto-markets2.csv */; };
@@ -33,13 +31,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		9C50028F22A930F7008AE561 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C50027222A930F5008AE561 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C50027922A930F5008AE561;
-			remoteInfo = CryptoApp;
-		};
-		9C50029A22A930F7008AE561 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9C50027222A930F5008AE561 /* Project object */;
 			proxyType = 1;
@@ -71,9 +62,6 @@
 		9C50028E22A930F7008AE561 /* CryptoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C50029222A930F7008AE561 /* CryptoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppTests.swift; sourceTree = "<group>"; };
 		9C50029422A930F7008AE561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C50029922A930F7008AE561 /* CryptoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C50029D22A930F7008AE561 /* CryptoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppUITests.swift; sourceTree = "<group>"; };
-		9C50029F22A930F7008AE561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CEEC75B22C3E88600A9CF93 /* EvaluationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationDAO.swift; sourceTree = "<group>"; };
 		9CEEC75D22C3FE0E00A9CF93 /* PredictionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionDAO.swift; sourceTree = "<group>"; };
 		9CEEC76322C4127300A9CF93 /* crypto-markets2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "crypto-markets2.csv"; path = "../../crypto-markets2.csv"; sourceTree = "<group>"; };
@@ -99,14 +87,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B73EC0825B01303E893BE4 /* Pods_CryptoAppTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C50029622A930F7008AE561 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E22E83757E457141247C9B6 /* Pods_CryptoAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +160,6 @@
 			children = (
 				9C50027C22A930F5008AE561 /* CryptoApp */,
 				9C50029122A930F7008AE561 /* CryptoAppTests */,
-				9C50029C22A930F7008AE561 /* CryptoAppUITests */,
 				9C50027B22A930F5008AE561 /* Products */,
 				12E2304862333AFD9867923D /* Pods */,
 				A3BBE0A772AF43365EA21E97 /* Frameworks */,
@@ -192,7 +171,6 @@
 			children = (
 				9C50027A22A930F5008AE561 /* CryptoApp.app */,
 				9C50028E22A930F7008AE561 /* CryptoAppTests.xctest */,
-				9C50029922A930F7008AE561 /* CryptoAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,15 +198,6 @@
 				9C50029422A930F7008AE561 /* Info.plist */,
 			);
 			path = CryptoAppTests;
-			sourceTree = "<group>";
-		};
-		9C50029C22A930F7008AE561 /* CryptoAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9C50029D22A930F7008AE561 /* CryptoAppUITests.swift */,
-				9C50029F22A930F7008AE561 /* Info.plist */,
-			);
-			path = CryptoAppUITests;
 			sourceTree = "<group>";
 		};
 		A3BBE0A772AF43365EA21E97 /* Frameworks */ = {
@@ -282,25 +251,6 @@
 			productReference = 9C50028E22A930F7008AE561 /* CryptoAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9C50029822A930F7008AE561 /* CryptoAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C5002A822A930F7008AE561 /* Build configuration list for PBXNativeTarget "CryptoAppUITests" */;
-			buildPhases = (
-				ADF035A957A970F5261B5A2C /* [CP] Check Pods Manifest.lock */,
-				9C50029522A930F7008AE561 /* Sources */,
-				9C50029622A930F7008AE561 /* Frameworks */,
-				9C50029722A930F7008AE561 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9C50029B22A930F7008AE561 /* PBXTargetDependency */,
-			);
-			name = CryptoAppUITests;
-			productName = CryptoAppUITests;
-			productReference = 9C50029922A930F7008AE561 /* CryptoAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,10 +265,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					9C50028D22A930F7008AE561 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 9C50027922A930F5008AE561;
-					};
-					9C50029822A930F7008AE561 = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 9C50027922A930F5008AE561;
 					};
@@ -339,7 +285,6 @@
 			targets = (
 				9C50027922A930F5008AE561 /* CryptoApp */,
 				9C50028D22A930F7008AE561 /* CryptoAppTests */,
-				9C50029822A930F7008AE561 /* CryptoAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -360,13 +305,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9C50028C22A930F7008AE561 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C50029722A930F7008AE561 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,28 +353,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoApp/Pods-CryptoApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ADF035A957A970F5261B5A2C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CryptoAppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E91BBEBE69322E2963E023B8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,15 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C50029322A930F7008AE561 /* CryptoAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C50029522A930F7008AE561 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C50029E22A930F7008AE561 /* CryptoAppUITests.swift in Sources */,
+				4063776322CD937A0093E069 /* CryptoAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,11 +410,6 @@
 			isa = PBXTargetDependency;
 			target = 9C50027922A930F5008AE561 /* CryptoApp */;
 			targetProxy = 9C50028F22A930F7008AE561 /* PBXContainerItemProxy */;
-		};
-		9C50029B22A930F7008AE561 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C50027922A930F5008AE561 /* CryptoApp */;
-			targetProxy = 9C50029A22A930F7008AE561 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -695,7 +598,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XBEPC2JPC9;
+				DEVELOPMENT_TEAM = CBJLEDS7Z4;
 				INFOPLIST_FILE = CryptoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,7 +620,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XBEPC2JPC9;
+				DEVELOPMENT_TEAM = CBJLEDS7Z4;
 				INFOPLIST_FILE = CryptoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -729,48 +632,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoApp.app/CryptoApp";
-			};
-			name = Release;
-		};
-		9C5002A922A930F7008AE561 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85E2E59C0F94CC03370BC16B /* Pods-CryptoAppUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XBEPC2JPC9;
-				INFOPLIST_FILE = CryptoAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Teste.CryptoAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CryptoApp;
-			};
-			name = Debug;
-		};
-		9C5002AA22A930F7008AE561 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D59CB7712128EBB7106194A4 /* Pods-CryptoAppUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XBEPC2JPC9;
-				INFOPLIST_FILE = CryptoAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Teste.CryptoAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CryptoApp;
 			};
 			name = Release;
 		};
@@ -800,15 +661,6 @@
 			buildConfigurations = (
 				9C5002A622A930F7008AE561 /* Debug */,
 				9C5002A722A930F7008AE561 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C5002A822A930F7008AE561 /* Build configuration list for PBXNativeTarget "CryptoAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C5002A922A930F7008AE561 /* Debug */,
-				9C5002AA22A930F7008AE561 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

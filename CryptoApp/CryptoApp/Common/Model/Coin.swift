@@ -5,9 +5,15 @@
 //  Created by Wellington Bezerra on 6/19/19.
 //  Copyright © 2019 Felipe Viberti. All rights reserved.
 //
-import Foundation
 
-final class Coin:NSObject {
+import UIKit
+
+class Coin: Equatable {
+   
+    static func == (lhs: Coin, rhs: Coin) -> Bool {
+        return lhs.name == rhs.name && lhs.initials == rhs.initials && lhs.imageView == rhs.imageView && lhs.value == rhs.value && lhs.percentage == rhs.percentage
+    }
+    
     
     var name: String = ""
     var initials: String = ""
@@ -23,4 +29,5 @@ final class Coin:NSObject {
         self.value = value
         self.percentage = percentage
     }
+    
 }
