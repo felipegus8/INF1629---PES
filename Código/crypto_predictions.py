@@ -13,10 +13,10 @@ np.set_printoptions(threshold=sys.maxsize)
 def get_predictions(coin):
     #This function calls all others in this module to obtain a json with the predicted values for the desidered cryptocurrency.
     # Pre: coin must be a valid cryptocurrency string. This string must be present in the symbol column of the crypto-markets.csv. No prediction will be obtained if this isn't the case.
-    #Post : This function returns a json with the predictions for the coin passed to it as a parameter if the call functions perform correctly.
+    #Post : This function returns a json with the predictions for the coin passed to it as a parameter if the call functions perform correctly.The called functions have all been called with the correct parameters.
     df= pd.read_csv('crypto-markets.csv', parse_dates=['date'], index_col='date')
     df=df[df['symbol']==coin]
-    if(!df.empty):
+    if(df.empty == False):
         remove_columns(df)
         box_cox_transform(df)
         y = resample_df(df)
@@ -29,16 +29,15 @@ def get_predictions(coin):
 def remove_columns(df):
     #This function removes the following columns from the dataframe passed to it as a parameter: "volume,symbol,name,ranknow,market,close_ratio,spread,slug"
     # Pre: None
-    #Post : This function removes the 'volume','symbol','name','ranknow','market','close_ratio','spread','slug' columns from the dataframe passed to it.
+    #Post : This function removes the 'volume','symbol','name','ranknow','market','close_ratio','spread','slug' columns from the dataframe passed to it. This is assured because of the native drop function.
     df.drop(['volume','symbol','name','ranknow','market','close_ratio','spread','slug'],axis=1,inplace=True)#Just dropping columns here!
 
 
 def box_cox_transform(df):
     #This function performs the box cox transformation in the column close of the dataframe passed to it.
     # Pre: The dataframe passed to it must have the column "close"
-    #Post : This function replaces the values in the column close of the dataframe with the box cox transformed values for that column.
-    if(df['close'] != None):
-        df['close'] = boxcox(df['close'], lmbda=0.0)
+    #Post : This function replaces the values in the column close of the dataframe with the box cox transformed values for that column. This transformation is assured because of the native boxcox function.
+    df['close'] = boxcox(df['close'], lmbda=0.0)
 
 def plot_current_df(df):
     #This function plots the monthly values of the column close in the dataframe passed to it.
