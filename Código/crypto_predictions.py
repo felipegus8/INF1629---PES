@@ -13,21 +13,23 @@ np.set_printoptions(threshold=sys.maxsize)
 def get_predictions(coin):
     #This function calls all others in this module to obtain a json with the predicted values for the desidered cryptocurrency.
     # Pre: coin must be a valid cryptocurrency string. This string must be present in the symbol column of the crypto-markets.csv. No prediction will be obtained if this isn't the case.
-    #Post : This function returns a json with the predictions for the coin passed to it as a parameter.
+    #Post : This function returns a json with the predictions for the coin passed to it as a parameter if the call functions perform correctly.
     df= pd.read_csv('crypto-markets.csv', parse_dates=['date'], index_col='date')
     df=df[df['symbol']==coin]
-    remove_columns(df)
-    box_cox_transform(df)
-    y = resample_df(df)
-    pred_df = ARIMA_time_series_predicition(y,df)
-    predicted_to_csv(pred_df,coin)
-    return predicted_to_json(pred_df, coin)
+    if(!df.empty):
+        remove_columns(df)
+        box_cox_transform(df)
+        y = resample_df(df)
+        pred_df = ARIMA_time_series_predicition(y,df)
+        predicted_to_csv(pred_df,coin)
+        return predicted_to_json(pred_df, coin)
+    return None
 
 
 def remove_columns(df):
     #This function removes the following columns from the dataframe passed to it as a parameter: "volume,symbol,name,ranknow,market,close_ratio,spread,slug"
-    # Pre: The dataframe passed to it must have the columns mentioned above
-    #Post : This function removes the mentioned columns from the dataframe passed to it.
+    # Pre: None
+    #Post : This function removes the 'volume','symbol','name','ranknow','market','close_ratio','spread','slug' columns from the dataframe passed to it.
     df.drop(['volume','symbol','name','ranknow','market','close_ratio','spread','slug'],axis=1,inplace=True)#Just dropping columns here!
 
 
@@ -35,7 +37,8 @@ def box_cox_transform(df):
     #This function performs the box cox transformation in the column close of the dataframe passed to it.
     # Pre: The dataframe passed to it must have the column "close"
     #Post : This function replaces the values in the column close of the dataframe with the box cox transformed values for that column.
-    df['close'] = boxcox(df['close'], lmbda=0.0)
+    if(df['close'] != None):
+        df['close'] = boxcox(df['close'], lmbda=0.0)
 
 def plot_current_df(df):
     #This function plots the monthly values of the column close in the dataframe passed to it.
@@ -82,13 +85,13 @@ def ARIMA_time_series_predicition(y,df):
 
 def predicted_to_csv(df,coin):
     #This function creates a csv from a dataframe. The name of the csv is based on the coin name passed to it.
-    # Pre: The dataframe passed to it must have the columns "lower close", "upper close" and "predicted value".The coin passed to it must be in the crypto-markets.csv file.
+    # Pre: None
     #Post : This function creates a CSV file and saves it to the current directory. The csv will have the same columns as the df passed to it as a parameter.
     df.to_csv('Predictions_'+ coin +'.csv')
 
 def predicted_to_json(df, coin):
     #This function creates a json from a dataframe.
-    # Pre: The dataframe passed to it must have the columns "lower close", "upper close" and "predicted value".The coin passed to it must be in the crypto-markets.csv file.
+    # Pre: None
     #Post : This function returns a JSON with the same columns as the df passed to it as a parameter.
     d = df.to_dict(orient='records')
     return d
