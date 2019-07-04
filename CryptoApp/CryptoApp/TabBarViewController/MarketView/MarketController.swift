@@ -13,7 +13,7 @@ protocol MarketControllerOutput: class {
     func error()
 }
 
-final class MarketController {
+class MarketController {
     
     private var coins: [Coin] = []
     weak var output: MarketControllerOutput?
@@ -52,5 +52,26 @@ final class MarketController {
         coins = coinArray
         
         self.output?.success(coins: coins)
+    }
+    
+    // Função que ordena as criptomoedas
+    // PRE: Recebe um array de moedas nao nulo e com mais de um elemento e também recebe um tipo de ordenaçao
+    // POS: Retorna o array de criptomoedas ordenado
+    func coinsOrder(coins: [Coin], type: SortingTypeCoin) -> [Coin] {
+        
+        guard coins.count > 1 else {
+            
+            return coins.count == 0 ? [] : [coins.first!]
+        }
+        
+        switch type {
+            
+        case .alphabeticallyName_A_Z:
+            return coins.sorted(by: {$0.name < $1.name})
+            
+        case .alphabeticallyName_Z_A:
+            return coins.sorted(by: {$0.name > $1.name})
+            
+        }
     }
 }

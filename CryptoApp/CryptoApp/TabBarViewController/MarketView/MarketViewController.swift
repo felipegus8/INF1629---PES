@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum SortingTypeCoin {
+    case alphabeticallyName_A_Z
+    case alphabeticallyName_Z_A
+}
+
 class MarketViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -112,6 +117,8 @@ extension MarketViewController: MarketControllerOutput {
     func success(coins: [Coin]) {
         
         coinsCopy = coins
+        
+        coinsCopy = controller.coinsOrder(coins: coinsCopy, type: .alphabeticallyName_A_Z)
         
         tableView.reloadData()
     }
